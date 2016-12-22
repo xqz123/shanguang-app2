@@ -1,0 +1,8 @@
+page-item-detail {
+  .item-detail{
+    ion-note {
+      color: map-get($colors, primary);
+      font-weight: normal;
+    }
+  }
+}

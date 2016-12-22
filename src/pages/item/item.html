@@ -1,0 +1,55 @@
+<!--
+  Generated template for the Item page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="shanguang">
+    <ion-title>商品一覧</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-toolbar class="narrow-bar">
+    <ion-segment [(ngModel)]="category">
+      <ion-segment-button value="mercari">メルカリ</ion-segment-button>
+      <ion-segment-button value="fril">フリル</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch] = "category">
+    <ion-list *ngSwitchCase="'mercari'">
+      <button ion-item (click)="showDetail($event)">
+        <ion-thumbnail item-left>
+          <img src="http://img1.3lian.com/2015/w2/10/d/72.jpg"/>
+        </ion-thumbnail>
+        <h2>Condominium Redefined</h2>
+        <p>Boston</p>
+      </button>
+      <button ion-item (click)="showDetail($event)">
+        <ion-thumbnail item-left>
+          <img src="http://desk.fd.zol-img.com.cn/t_s960x600c5/g4/M00/0D/01/Cg-4y1ULoXCII6fEAAeQFx3fsKgAAXCmAPjugYAB5Av166.jpg"/>
+        </ion-thumbnail>
+        <h2>Ultimate Sophistication</h2>
+        <p>Cambridge</p>
+      </button>
+    </ion-list>
+    <ion-list *ngSwitchCase="'fril'">
+      <button ion-item (click)="showDetail($event)">
+        <ion-thumbnail item-left>
+          <img src="http://scimg.jb51.net/allimg/151015/14-151015141TL31.jpg"/>
+        </ion-thumbnail>
+        <h2>Seaport District Retreat</h2>
+        <p>Boston</p>
+      </button>
+      <button ion-item (click)="showDetail($event)">
+        <ion-thumbnail item-left>
+          <img src="http://img1.sc115.com/uploads/sc/jpg/HD/2/45.jpg"/>
+        </ion-thumbnail>
+        <h2>Modern City Living</h2>
+        <p>Cambridge</p>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>

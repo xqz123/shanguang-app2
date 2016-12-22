@@ -1,0 +1,104 @@
+<!--
+  Generated template for the History page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="shanguang">
+    <ion-title>閃光セラー</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-toolbar class="narrow-bar">
+    <ion-segment [(ngModel)]="category">
+      <ion-segment-button value="mercari">メルカり</ion-segment-button>
+      <ion-segment-button value="fril">フリル</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div [ngSwitch] = "category">
+    <ion-list *ngSwitchCase="'mercari'">
+      <!-- <ion-list-header style="font-size: 20px">自動出品履歴</ion-list-header> -->
+      <ion-grid>
+        <ion-row>
+          <ion-col width-20>出品日付</ion-col>
+          <ion-col width-20>自動削除进度</ion-col>
+          <ion-col width-20>自動出品进度</ion-col>
+          <ion-col width-20>削除失敗件数</ion-col>
+          <ion-col width-20>出品失敗件数</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-20 (click)="showDetail()">2016-12-12
+          </ion-col>
+          <ion-col width-20>11/55</ion-col>
+          <ion-col width-20>20/57</ion-col>
+          <ion-col width-20>
+            <ion-badge color="danger">4</ion-badge>
+          </ion-col>
+          <ion-col width-20>
+            <ion-badge color="primary">0</ion-badge>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-20 (click)="showDetail()">
+            2016-11-12
+          </ion-col>
+          <ion-col width-20>15/55</ion-col>
+          <ion-col width-20>54/57</ion-col>
+          <ion-col width-20>
+            <ion-badge color="primary">0</ion-badge>
+          </ion-col>
+          <ion-col width-20>
+            <ion-badge color="primary">0</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'fril'">
+    <ion-grid>
+        <ion-row>
+          <ion-col width-20>出品日付</ion-col>
+          <ion-col width-20>自動削除进度</ion-col>
+          <ion-col width-20>自動出品进度</ion-col>
+          <ion-col width-20>削除失敗件数</ion-col>
+          <ion-col width-20>出品失敗件数</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-20 (click)="showDetail()">2016-12-12</ion-col>
+          <ion-col width-20>11/55</ion-col>
+          <ion-col width-20>20/57</ion-col>
+          <ion-col width-20>
+            <ion-badge color="danger">4</ion-badge>
+          </ion-col>
+          <ion-col width-20>
+            <ion-badge color="primary">0</ion-badge>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col width-20 (click)="showDetail()">2016-11-12</ion-col>
+          <ion-col width-20>15/55</ion-col>
+          <ion-col width-20>54/57</ion-col>
+          <ion-col width-20>
+            <ion-badge color="danger">1</ion-badge>
+          </ion-col>
+          <ion-col width-20>
+            <ion-badge color="primary">0</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>
