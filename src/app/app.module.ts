@@ -11,6 +11,9 @@ import { CommentDetailPage } from '../pages/comment-detail/comment-detail';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { HistoryDetailPage } from '../pages/history-detail/history-detail';
 import { MessageListPage } from '../pages/message-list/message-list';
+import { ItemOptionsPage } from '../pages/item-options/item-options';
+import { ItemBuyerInformationPage } from '../pages/item-buyer-information/item-buyer-information';
+
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { MessageListPage } from '../pages/message-list/message-list';
     CommentDetailPage,
     ItemDetailPage,
     MessageListPage,
-    HistoryDetailPage
+    HistoryDetailPage,
+    ItemOptionsPage,
+    ItemBuyerInformationPage
   ],
   entryComponents: [
     AppComponent,
@@ -36,7 +41,9 @@ import { MessageListPage } from '../pages/message-list/message-list';
     MessageListPage,
     HistoryDetailPage,
     ItemDetailPage,
-    CommentDetailPage
+    CommentDetailPage,
+    ItemOptionsPage,
+    ItemBuyerInformationPage
   ],
   imports: [
     IonicModule.forRoot(AppComponent)

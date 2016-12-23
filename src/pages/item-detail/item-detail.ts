@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
+import { ItemOptionsPage } from '../item-options/item-options';
+import { ItemBuyerInformationPage } from '../item-buyer-information/item-buyer-information';
+
 
 /*
   Generated class for the ItemDetail page.
@@ -13,10 +16,26 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ItemDetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private popoverCtrl: PopoverController
+    ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailPage');
   }
 
+  showOptions(): void {
+    const popover = this.popoverCtrl.create(ItemOptionsPage, {
+      
+    }, {
+      cssClass: 'options-popover'
+    });
+    popover.present();
+  }
+
+  showItemBuyerInfo(): void{
+    this.navCtrl.push(ItemBuyerInformationPage, {});
+  }
 }
