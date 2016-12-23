@@ -10,7 +10,7 @@
       <ion-title>商品</ion-title>
     </span>
     <ion-buttons end>
-      <button ion-button icon-only (click)="showOptions($event)">
+      <button ion-button icon-only (click)="showOptions()">
         <ion-icon name="more"></ion-icon>
         </button>
     </ion-buttons>
@@ -66,7 +66,7 @@
           <button ion-button (click)="showItemBuyerInfo($event)">购买者信息</button>
         </ion-item>
         <ion-buttons end>
-          <button ion-button >确定</button>
+          <button ion-button class="item-edit-button">确定</button>
         </ion-buttons>
       </ion-list>
     </ion-card>
