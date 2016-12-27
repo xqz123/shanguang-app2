@@ -10,4 +10,18 @@ page-item-detail {
     font-size: 10px;
     color: "light";
   }
+
+  .item-name{
+    margin: 0px 0px 0px 10px;
+    width: 100%;
+  }
+
+  .item-price{
+    text-align: right;
+    width:80%;
+  }
+
+  .item-lable{
+    width:50%;
+  }
 }

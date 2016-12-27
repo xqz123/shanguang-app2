@@ -30,18 +30,20 @@
   </ion-toolbar>
 
   <div [ngSwitch] = "category">
-
     <ion-list *ngSwitchCase="'mercari'">
       <ion-card>
-        <ion-card-header>xuchen</ion-card-header>
-        <ion-card-content>
+        <ion-avatar >
+          <img class="account-picture" src="http://img1.3lian.com/2015/w2/10/d/72.jpg"/>
+        </ion-avatar>
+          <p>xuchen</p>
           <p>メール:cheng-zhang@rontech.co.jp</p>
+        <ion-card-content>
           <ion-list>
-            <button (click)="showList('notice')" ion-button small>
+            <button (click)="showList('notice')" ion-button icon-left small class="half">
               お知らせ
               <ion-badge color="danger">3</ion-badge>
             </button>
-            <button (click)="showList('doList')" ion-button color="light" small>
+            <button (click)="showList('doList')" ion-button icon-right color="light" small class="half">
               やることリスト
               <ion-badge color="primary">2</ion-badge>
             </button>
@@ -49,15 +51,18 @@
         </ion-card-content>
       </ion-card>
       <ion-card>
-        <ion-card-header>test2</ion-card-header>
-        <ion-card-content>
+          <ion-avatar item-left>
+            <img class="account-picture" src="http://img1.3lian.com/2015/w2/10/d/72.jpg"/>
+          </ion-avatar>
+          <p>test2</p>
           <p>メール:test2@rontech.co.jp</p>
+        <ion-card-content>
           <ion-list>
-            <button (click)="showList('notice')" ion-button small>
+            <button (click)="showList('notice')" ion-button small class="half">
               お知らせ
               <ion-badge color="danger">1</ion-badge>
             </button>
-            <button (click)="showList('doList')" ion-button color="light" small>
+            <button (click)="showList('doList')" ion-button color="light" small class="half">
               やることリスト
               <ion-badge color="primary">0</ion-badge>
             </button>
@@ -68,15 +73,18 @@
 
     <ion-list *ngSwitchCase="'fril'">
       <ion-card>
-        <ion-card-header>xuchen</ion-card-header>
+        <ion-avatar item-left>
+          <img class="account-picture" src="http://img1.3lian.com/2015/w2/10/d/72.jpg"/>
+        </ion-avatar>
+        <p>xuchen</p>
+        <p>メール:cheng-zhang@rontech.co.jp</p>
         <ion-card-content>
-          <p>メール:cheng-zhang@rontech.co.jp</p>
           <ion-list>
-            <button (click)="showList('notice')" ion-button small>
+            <button (click)="showList('notice')" ion-button small class="half">
               お知らせ
               <ion-badge color="danger">12</ion-badge>
             </button>
-            <button (click)="showList('doList')" ion-button color="light" small>
+            <button (click)="showList('doList')" ion-button color="light" small class="half">
               やることリスト
               <ion-badge color="primary">2</ion-badge>
             </button>

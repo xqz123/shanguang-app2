@@ -15,6 +15,8 @@ import { ItemBuyerInformationPage } from '../item-buyer-information/item-buyer-i
   templateUrl: 'item-detail.html'
 })
 export class ItemDetailPage {
+    itemName = 'Condominium Redefined';
+    itemPrice = 123;
 
   constructor(
     public navCtrl: NavController,
@@ -37,5 +39,14 @@ export class ItemDetailPage {
 
   showItemBuyerInfo(): void{
     this.navCtrl.push(ItemBuyerInformationPage, {});
+  }
+
+  editItemName(event:any): void{
+    this.itemName = event.target.value;
+    console.log(this.itemName);
+  }
+
+  editItemPrice(event:any): void{
+    this.itemPrice = event.target.value;
   }
 }

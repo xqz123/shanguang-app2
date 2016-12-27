@@ -22,51 +22,54 @@
     <ion-card>
       <img src="http://img1.3lian.com/2015/w2/10/d/72.jpg"/>
       <ion-card-header>
-      <ion-item>
-      <button item-left ><ion-icon name="create"></ion-icon></button>
-        Condominium Redefined
-      </ion-item>
+        <ion-item>
+          <!-- <ion-label item-left ><ion-icon name="create"></ion-icon></ion-label> -->
+          <ion-input type="text" (keyup)="editItemName($event)" value="{{itemName}}"></ion-input>
+          <ion-icon name="create" item-right></ion-icon>
+        </ion-item>
       </ion-card-header>
       <ion-list>
         <ion-item>
-          <ion-icon item-left name="ionic"></ion-icon>
           <h3>区分</h3>
           <ion-note item-right>123</ion-note>
         </ion-item>
         <ion-item>
-          <ion-icon item-left name="person"></ion-icon>
           <h3>アカウント</h3>
           <ion-note item-right>123</ion-note>
         </ion-item>
         <ion-item>
-          <ion-icon item-left name="cube"></ion-icon>
           <h3>出品状態</h3>
           <ion-note item-right>123</ion-note>
         </ion-item>
         <ion-item>
-          <ion-icon item-left name="cash"></ion-icon>
-          <h3>価格</h3>
-          <span item-right>
-          <button ><ion-icon name="create"></ion-icon></button>
-          <ion-note >123</ion-note>
-          </span>
+          <ion-label ><h3>価格</h3></ion-label>
+          <ion-input (keyup)="editItemPrice($event)" value="{{itemPrice}}"></ion-input>
+          <ion-icon name="create" item-right></ion-icon>
         </ion-item>
         <ion-item>
-        <ion-icon item-left name="pricetag"></ion-icon>
-        <ion-label >再出品/自动消除</ion-label>
-          <ion-select okText="选择" cancelText="取消">
-            <ion-option value="0">再出品</ion-option>
-            <ion-option value="1">消除</ion-option>
-            <ion-option value="2">不消除</ion-option>
-            <ion-option value="3">有评论时不删除</ion-option>
+        <ion-label >再出品</ion-label>
+          <ion-select okText="選択" cancelText="取り消す">
+            <ion-option value="0">再出品する</ion-option>
+            <ion-option value="1">再出品しない</ion-option>
+            <ion-option value="2">コメントある場合しない</ion-option>
           </ion-select>
         </ion-item>
         <ion-item>
-          <ion-icon item-left name="pricetag"></ion-icon>
-          <button ion-button (click)="showItemBuyerInfo($event)">购买者信息</button>
+        <ion-label >自動削除</ion-label>
+          <ion-select okText="選択" cancelText="取り消す">
+            <ion-option value="0">削除する</ion-option>
+            <ion-option value="1">削除しない</ion-option>
+            <ion-option value="2">コメントある場合しない</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <button ion-button full (click)="showItemBuyerInfo($event)">
+          <h3 item-left>購入者情報</h3>
+          cheng-zhang@rontech.co.jp ...
+          </button>
         </ion-item>
         <ion-buttons end>
-          <button ion-button class="item-edit-button">确定</button>
+          <button ion-button class="item-edit-button" small>商品情報を更新する</button>
         </ion-buttons>
       </ion-list>
     </ion-card>
